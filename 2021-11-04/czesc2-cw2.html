@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+	</head>
+	<body>
+		<p id="p"></p>
+		<script>
+			let p = document.querySelector('#p');
+			num = prompt('daj mnie liczbe tera');
+			if ((num > 1 && num != 3 && num != 8) || num == -2) {
+				p.innerText = 'liczba spełnia ustalone warunki';
+			} else {
+				p.innerText = 'liczba nie spełnia warunków zadania';
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+	</head>
+	<body>
+		<p id="p"></p>
+		<script>
+			let p = document.querySelector('#p');
+			color = prompt(
+				`give me a color and i'll translate it if it fits my limited selection of available, pre-chosen colors\n\n:)`
+			);
+			if (color == 'red') {
+				p.innerText = 'czerwony';
+			} else if (color == 'blue') {
+				p.innerText = 'niebieski';
+			} else if (color == 'green') {
+				p.innerText = 'zielony';
+			} else if (color == 'pink') {
+				p.innerText = 'różowy';
+			} else if (color == 'yellow') {
+				p.innerText = 'żółty';
+			} else if (color == 'purple') {
+				p.innerText = 'fioletowy';
+			} else if (color == 'orange') {
+				p.innerText = 'pomarańczowy';
+			} else {
+				p.innerText = 'nie znam takiego koloru :(';
+			}
+		</script>
+	</body>
+</html>
