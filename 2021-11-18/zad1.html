@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>eventlistener</title>
+		<style>
+			body {
+				background-color: blueviolet;
+				color: white;
+			}
+			p {
+				cursor: pointer;
+			}
+			.pStyle {
+				background-color: blue;
+				padding: 1rem;
+				border: 2px solid white;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Akapit 1</p>
+		<p>Akapit 2</p>
+		<p>Akapit 3</p>
+		<p>Akapit 4</p>
+		<script>
+			let p1 = document.querySelector('p:nth-of-type(1)');
+			let p2 = document.querySelector('p:nth-of-type(2)');
+			let p3 = document.querySelector('p:nth-of-type(3)');
+			let p4 = document.querySelector('p:nth-of-type(4)');
+			p1.onclick = () => {
+				p1.style.backgroundColor = 'blue';
+				p1.style.padding = '1rem';
+				p1.style.border = '2px solid white';
+				p1.style.textAlign = 'center';
+			};
+			function applyClass(onWhom) {
+				onWhom.classList.add('pStyle');
+			}
+			p2.onclick = () => {
+				applyClass(p2);
+			};
+			p3.onclick = () => {
+				applyClass(p3);
+			};
+			p4.onclick = () => {
+				applyClass(p4);
+			};
+		</script>
+	</body>
+</html>

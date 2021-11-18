@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>lista zakupów</title>
+		<style>
+			body {
+				background-color: blueviolet;
+				color: white;
+				text-align: center;
+				font-family: sans-serif;
+			}
+			hr {
+				margin: 2rem 0;
+				color: white;
+			}
+			ol {
+				text-align: left;
+				margin: 0 25rem;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Lista Zakupów</h1>
+		<button id="addBtn">Dodaj zakup</button>
+		<button id="rmBtn">Odejmij zakup</button>
+		<hr />
+		<ol id="lista">
+			<li>mleko</li>
+			<li>masło</li>
+			<li>tona węgla brunatnego</li>
+		</ol>
+		<script>
+			addBtn.addEventListener('click', () => {
+				let zmienna = prompt(
+					'Podaj nazwę artykułu brakującego w Waszym hałsholdzie:'
+				);
+				let nowyzakup = document.createElement('li');
+				nowyzakup.innerText = zmienna;
+				lista.appendChild(nowyzakup);
+			});
+			rmBtn.addEventListener('click', () => {
+				let zmienna = prompt('Jednak masz co trzeba? Proszę bardzo.');
+				lista.querySelectorAll('li').forEach((zakup) => {
+					if (zakup.innerText === zmienna) {
+						zakup.remove();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
