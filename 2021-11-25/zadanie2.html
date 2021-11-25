@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<style>
+			body {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" method="GET">
+			<h2>Podaj tekst</h2>
+			<textarea id="tekst"></textarea> <br />
+			<input type="button" value="zamień" onclick="pokaz()" />
+			<br />
+			<h2 id="wynik"></h2>
+			<br />
+			<select id="wielkosc">
+				<option>mały</option>
+				<option>średni</option>
+				<option>duży</option>
+			</select>
+			<br />
+			<input type="radio" name="kolor" id="cz" checked="" /> czerwony <br />
+			<input type="radio" name="kolor" id="ni" /> niebieski <br />
+			<input type="radio" name="kolor" id="zi" /> zielony <br />
+			<select id="font">
+				<option>Arial</option>
+				<option>Verdana</option>
+				<option>Monospace</option>
+			</select>
+		</form>
+		<script>
+			let out = document.querySelector('h2#wynik');
+			function pokaz() {
+				let sajz = document.querySelector('select#wielkosc').selectedIndex;
+				out.innerText = document.querySelector('textarea#tekst').value;
+				let w;
+				if (sajz == 0) {
+					w = '10px';
+				} else if (sajz == 1) {
+					w = '20px';
+				} else {
+					w = '30px';
+				}
+				out.style.fontSize = w;
+				let c;
+				if (cz.checked) {
+					c = 'red';
+				} else if (ni.checked) {
+					c = 'blue';
+				} else {
+					c = 'green';
+				}
+				out.style.color = c;
+				let f;
+				let famula = document.querySelector('select#font').selectedIndex;
+				if (famula == 0) {
+					f = 'Arial';
+				} else if (famula == 1) {
+					f = 'Verdana';
+				} else {
+					f = 'Monospace';
+				}
+				out.style.fontFamily = f;
+			}
+		</script>
+	</body>
+</html>
