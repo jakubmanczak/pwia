@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+	</head>
+	<body>
+		<h2 class="class1">Nagłówek z klasą ="class1".</h2>
+		<h3 class="class2">Nagłówek z klasą ="class2".</h3>
+		<p class="class1">Akapit z klasą ="class1".</p>
+		<p class="class1">Drugi akapit z klasą ="class1".</p>
+		<p id="id1">Akapit bez klasy z identyfikatorem</p>
+		<ul>
+			<li>punkt pierwszy</li>
+			<li>punkt drugi</li>
+			<li class="class2">punkt trzeci</li>
+			<li class="class2">punkt czwarty</li>
+		</ul>
+		<p id="dodanyNaPoleceniePodczasZajec">nasza próba</p>
+		<button>Zmień kolor tła pierwszego akapitu z klasą="class1"</button>
+		<br /><br />
+		<button>Zmień kolor tła i tekst akapitu z identyfikatorem</button>
+		<br /><br />
+		<button>Zmień kolor tła punktów listy</button>
+		<script>
+			document.querySelector('button:nth-of-type(1)').onclick = function () {
+				let akapit = document.querySelector('p.class1');
+				akapit.style.backgroundColor = 'lavender';
+			};
+			document.querySelector('button:nth-of-type(2)').onclick = () => {
+				let pIdCollection = document.querySelectorAll('p[id]');
+				for (pwId of pIdCollection) {
+					pwId.style.color = 'lavender';
+					pwId.style.backgroundColor = 'purple';
+				}
+			};
+			document.querySelector('button:nth-of-type(3)').onclick = () => {
+				let punkty = document.querySelectorAll('li');
+				punkty.forEach((el) => {
+					el.style.backgroundColor = 'lavender';
+				});
+			};
+		</script>
+	</body>
+</html>
