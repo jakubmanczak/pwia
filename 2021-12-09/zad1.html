@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<style>
+			body {
+				background-color: blueviolet;
+				color: wheat;
+			}
+			a {
+				color: yellow;
+			}
+			/* .hidden {
+				display: none;
+			} */
+		</style>
+	</head>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+			veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			commodo consequat.
+			<a href="#" id="klik">rozwin</a>
+		</p>
+		<p id="show" style="display: none">
+			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+			dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<script>
+			let a = document.querySelector('a#klik');
+			let b = document.querySelector('p#show');
+			// a.onclick = () => {
+			// 	// b.classList.toggle('hidden');
+			// 	b.style.display == 'none'
+			// 		? (b.style.display = 'block')
+			// 		: (b.style.display = 'none');
+			// 	a.innerText == 'rozwin'
+			// 		? (a.innerText = 'schowaj')
+			// 		: (a.innerText = 'rozwin');
+			// };
+			a.addEventListener('click', () => {
+				b.style.display == 'none'
+					? (b.style.display = 'block')
+					: (b.style.display = 'none');
+				a.innerText == 'rozwin'
+					? (a.innerText = 'schowaj')
+					: (a.innerText = 'rozwin');
+			});
+		</script>
+	</body>
+</html>

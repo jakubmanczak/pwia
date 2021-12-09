@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<style>
+			body {
+				background-color: black;
+				font-size: 2rem;
+				font-weight: 550;
+				color: white;
+			}
+			.kolor {
+				color: red;
+				letter-spacing: 20px;
+			}
+			#xd {
+				letter-spacing: 40px;
+				color: blueviolet;
+			}
+			.togiel {
+				margin: 2rem;
+				padding: 5rem;
+				font-weight: 100;
+				color: violet;
+				font-family: monospace;
+			}
+		</style>
+	</head>
+	<body>
+		<p>abc</p>
+		<p>def</p>
+		<p>ghadasdaw</p>
+		<p>aaaaaaaaaaaaaaaaaa</p>
+		<img src="jakas-sciema.png" alt="zdjendzie" id="photo" />
+		<script>
+			let akapity = document.querySelectorAll('p');
+			for (el of akapity) {
+				el.setAttribute('class', 'kolor');
+			}
+			akapity[1].setAttribute('id', 'xd');
+			akapity[2].removeAttribute('class');
+			console.log(`
+			     element drugi ${
+							akapity[1].hasAttribute('id') ? 'ma atrybut' : 'nie ma atrybutu'
+						} id
+			   `);
+			console.log(document.querySelector('img').attributes);
+			akapity[3].onmouseover = () => {
+				akapity[3].classList.toggle('togiel');
+			};
+		</script>
+	</body>
+</html>
