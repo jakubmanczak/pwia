@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background-color: #242424;
+				color: #f0f0f0;
+			}
+			button {
+				background-color: #363636;
+				color: white;
+				font-size: 2rem;
+				border: 0;
+				cursor: pointer;
+				margin: 2rem;
+				padding: 2rem;
+			}
+			p {
+				font-size: 2rem;
+				text-shadow: 0px 0px 0px 15px #242424;
+			}
+		</style>
+	</head>
+	<body>
+		<button>LOSUJ KOLOR</button>
+		<script>
+			let color;
+			let akapit = document.createElement('p');
+			document.body.append(akapit);
+			document.querySelector('button').onclick = () => {
+				let colR1 = Math.floor(Math.random() * 16).toString(16);
+				let colR2 = Math.floor(Math.random() * 16).toString(16);
+				let colB1 = Math.floor(Math.random() * 16).toString(16);
+				let colB2 = Math.floor(Math.random() * 16).toString(16);
+				let colG1 = Math.floor(Math.random() * 16).toString(16);
+				let colG2 = Math.floor(Math.random() * 16).toString(16);
+				color = colR1 + colR2 + colB1 + colB2 + colG1 + colG2;
+				akapit.innerText = `#${color}`;
+			};
+			document.addEventListener('keydown', (ev) => {
+				if (ev.keyCode == 32) {
+					document.body.style.backgroundColor = `#${color}`;
+				}
+			});
+		</script>
+	</body>
+</html>

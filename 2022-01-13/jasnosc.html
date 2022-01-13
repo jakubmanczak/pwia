@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			:root {
+				--bg: #242424;
+				--fg: #fcfcfc;
+			}
+			.swiatlosc {
+				--bg: #fcfcfc;
+				--fg: #242424;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background-color: var(--bg);
+				color: var(--fg);
+				font-family: sans-serif;
+			}
+			button {
+				margin: 2rem;
+				padding: 0.25rem;
+			}
+			img {
+				max-width: 64rem;
+			}
+		</style>
+	</head>
+	<body>
+		<button>wlacz swiatlo</button>
+		<section>
+			<h3 style="text-align: center">Ciemnosc</h3>
+			<img src="ciemno.jpg" alt="jest noc" />
+		</section>
+		<script>
+			let tekst = document.querySelector('h3');
+			let zdj = document.querySelector('img');
+			document.querySelector('button').onclick = () => {
+				if (document.querySelector('button').textContent == 'wlacz swiatlo') {
+					document.querySelector('button').textContent = 'wylacz swiatlo';
+					tekst.innerText = 'Swiatlosc';
+					document.querySelector('body').classList.add('swiatlosc');
+					zdj.src = 'jasno.jpg';
+					zdj.alt = 'jest dzien';
+				} else {
+					document.querySelector('button').textContent = 'wlacz swiatlo';
+					tekst.innerText = 'Ciemnosc';
+					document.querySelector('body').classList.remove('swiatlosc');
+					zdj.src = 'ciemno.jpg';
+					zdj.alt = 'jest noc';
+				}
+			};
+		</script>
+	</body>
+</html>
