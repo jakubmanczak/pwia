@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+	</head>
+	<body>
+		<button>Oblicz sumę</button>
+		<script>
+			const liczby = [];
+			let ilosc = 5;
+			let suma = 0;
+			for (let i = 0; i < ilosc; i++) {
+				liczby[i] = Number(prompt(`Podaj liczbę o indeksie ${i}:`));
+			}
+			document.querySelector('button').addEventListener('click', () => {
+				for (let i = 0; i < ilosc; i++) {
+					suma += liczby[i];
+				}
+				document.write(`Suma liczb z tabeli: ${suma}`);
+			});
+		</script>
+	</body>
+</html>

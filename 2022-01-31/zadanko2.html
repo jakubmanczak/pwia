@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+	</head>
+	<body>
+		<script>
+			const liczby = [];
+			let ilosc = prompt('Ile liczb chcesz wpisać?');
+			for (let i = 0; i < ilosc; i++) {
+				liczby[i] = prompt(`Podaj liczbę o indeksie ${i}:`);
+			}
+			document.write(liczby.reverse());
+		</script>
+	</body>
+</html>
