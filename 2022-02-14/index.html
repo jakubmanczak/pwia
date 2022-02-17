@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<style>
+			header {
+				width: 100%;
+				height: 60px;
+				background-color: blueviolet;
+				color: white;
+				font-size: 2em;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+			W naglowku wyswietl aktualna date i czas.
+			Dodatkowo czas wyswietl innym kolorem w zalezn. od godziny
+		 -->
+		<header></header>
+		<script>
+			let akapit = document.createElement('p');
+			document.querySelector('header').append(akapit);
+
+			let time = new Date();
+			let dzien;
+			switch (time.getDay()) {
+				case 0:
+					dzien = 'niedziela';
+					break;
+				case 1:
+					dzien = 'poniedziałek';
+					break;
+				case 2:
+					dzien = 'wtorek';
+					break;
+				case 3:
+					dzien = 'środa';
+					break;
+				case 4:
+					dzien = 'czwartek';
+					break;
+				case 5:
+					dzien = 'piątek';
+					break;
+				case 6:
+					dzien = 'sobota';
+					break;
+			}
+			let miesiace = [
+				'styczeń',
+				'luty',
+				'marzec',
+				'kwiecień',
+				'maj',
+				'czerwiec',
+				'lipiec',
+				'sierpień',
+				'wrzesień',
+				'październik',
+				'listopad',
+				'grudzień',
+			];
+			let godzina = time.getHours();
+			document.querySelector('p').innerText = `Dziś jest: ${dzien}, ${time.getDate()} ${miesiace[time.getMonth()]}, ${time.getFullYear()}.`;
+			document.querySelector('p').innerText += ` Godzina ${godzina}:${time.getMinutes()}:${time.getSeconds()}`;
+
+			if( godzina >= 0 && godzina < 6 ) document.querySelector('p').style.color = 'peru';
+			else if( godzina >= 6 && godzina < 12 ) document.querySelector('p').style.color = 'hotpink';
+			else if( godzina >= 12 && godzina < 18 ) document.querySelector('p').style.color = 'khaki';
+			else document.querySelector('p').style.color = 'plum';
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+	</head>
+	<body>
+		<script>
+			let zdanie = prompt('podaj zdanie');
+			let len = zdanie.length;
+			let wzor = /[A-Za-z]/g;
+			let nowezdanie = zdanie.replace(wzor, "");
+			let letterlen = nowezdanie.length;
+			let roznica = len - letterlen;
+
+			let par = document.createElement('p');
+			document.body.appendChild(par);
+			
+			document.querySelector('p').innerText = `
+				Twoje zdanie (${zdanie}) jest długie na ${len} znaków, zawiera ${letterlen} liter.\n
+				Usunięto więc ${roznica} znaków.
+			`;
+		</script>
+	</body>
+</html>

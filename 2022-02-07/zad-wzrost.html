@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+	</head>
+	<body>
+		<section>
+			<label>
+				Podaj wzrost
+				<input type="text" min="150" max="210">
+			</label>
+			<input type="button" value="Określ wzrost">
+		</section>
+		<script>
+			let p = document.createElement('p');
+			document.body.append(p);
+			
+			function changeClr(clr){
+				document.querySelector(`input[type='text']`).style.borderColor = clr;
+			}
+
+			document.querySelector(`input[type='button']`).addEventListener('click', () => {
+				let dane = parseInt(document.querySelector(`input[type='text']`).value);
+
+				if( dane < 150 || dane > 210 || dane == ' ' || isNaN(dane) ){
+					p.innerText = 'błędne dane'; changeClr('red');
+				}else if(dane <= 165){
+					p.innerText = 'karzeł'; changeClr('black');
+				}else if(dane <= 175){
+					p.innerText = 'niski'; changeClr('black');
+				}else if(dane <= 185){
+					p.innerText = 'średni'; changeClr('black');
+				}else if(dane <= 195){
+					p.innerText = 'wysoki'; changeClr('black');
+				}else{
+					p.innerText = 'dryblas'; changeClr('black');
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+	</head>
+	<body>
+		<script>
+			const liczby = new Array(20);
+			const podzielne = [];
+			for(i = 0; i < liczby.length; i++){
+				liczby[i] = Math.round(Math.random() * 50 + 1);
+			}
+			console.log(liczby);
+			document.body.innerHTML += `<p> ${liczby} </p>`;
+			for(i = 0; i < liczby.length; i++){
+				if(liczby[i] % 3 == 0) podzielne.push(liczby[i]);
+			}
+			console.log(podzielne);
+			document.body.innerHTML +=
+			`<p> Liczby podzielne przez 3: ${podzielne} </p>`;
+		</script>
+	</body>
+</html>
