@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>jakubmanczak</title>
+		<link rel="stylesheet" href="manczak.css" />
+	</head>
+	<body>
+		<header></header>
+		<article></article>
+		<aside>
+			<p>Lista kolorów!</p>
+			<select id="kolor">
+				<option value="red">red</option>
+				<option value="blue">blue</option>
+				<option value="yellow">yellow</option>
+				<option value="black">black</option>
+				<option value="pink">pink</option>
+				<option value="losuj">losuj</option>
+			</select>
+			<label>
+				Czy pogrubić?
+				<input type="radio" name="bor" id="border1" value="tak" /> tak
+				<input type="radio" name="bor" id="border2" value="nie" /> nie
+			</label>
+			<button id="btn">zmień napis</button>
+			<script>
+				let tekst = prompt('Podaj imie i nazwisko:');
+
+				document.querySelector('#btn').addEventListener('click', () => {
+					let p = document.createElement('p');
+					p.innerText = tekst;
+
+					let kolorek;
+					if (document.querySelector('select#kolor').value != 'losuj') {
+						kolorek = document.querySelector('select#kolor').value;
+					} else {
+						let r1 = Math.floor(Math.random() * 16).toString(16);
+						let r2 = Math.floor(Math.random() * 16).toString(16);
+						let b1 = Math.floor(Math.random() * 16).toString(16);
+						let b2 = Math.floor(Math.random() * 16).toString(16);
+						let g1 = Math.floor(Math.random() * 16).toString(16);
+						let g2 = Math.floor(Math.random() * 16).toString(16);
+						let kolorekLosowy = r1 + r2 + b1 + b2 + g1 + g2;
+						kolorek = `#${kolorekLosowy}`;
+					}
+					p.style.color = kolorek;
+
+					if (document.querySelector('#border1').checked) {
+						p.style.fontWeight = 'bold';
+					}
+
+					document.querySelector('article').innerHTML = '';
+					document.querySelector('article').append(p);
+				});
+			</script>
+		</aside>
+		<footer>
+			<a href="mailto:jakub@manczak.net">jakubmanczak</a>
+		</footer>
+	</body>
+</html>
