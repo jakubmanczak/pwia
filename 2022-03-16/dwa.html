@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<style>
+			html {
+				background-color: crimson;
+				color: wheat;
+				font-size: 1.5rem;
+			}
+			section {
+				background-color: wheat;
+				color: black;
+				padding: 4rem;
+				margin: 2rem;
+				border-radius: 1rem;
+				text-align: center;
+			}
+			section > button {
+				padding: 1.5rem;
+				font-size: 2rem;
+				background-color: crimson;
+				transition-duration: 150ms;
+				box-shadow: 1rem 1rem 0 black;
+			}
+			section > button:hover,
+			section > button:focus {
+				box-shadow: -1rem 1rem 0 black;
+				cursor: pointer;
+			}
+			form {
+				/* display: none; */
+				/* opacity: 0; */
+				position: absolute;
+				width: 32rem;
+				height: 24rem;
+				left: calc(50% - 16rem);
+				top: -28rem;
+				background-color: wheat;
+				transition-duration: 150ms;
+				color: black;
+				text-align: center;
+				border-radius: 1rem;
+				box-shadow: 1rem 1rem 5rem rgba(1, 1, 1, 0.5);
+			}
+			form.widoczny {
+				top: calc(50% - 12rem);
+			}
+			form > input {
+				width: 16rem;
+				padding: 0.5 rem;
+			}
+			form > div {
+				margin: 2rem 0;
+			}
+			form > input[type='submit'] {
+				padding: 1rem;
+				font-size: 0.9em;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h1>Jakub Mańczak</h1>
+			<p>Udaje że coś wie, nazywa się Installation Wizardem.</p>
+			<button>Dodaj do znajomych</button>
+		</section>
+		<form action="">
+			<p>Napisz temu łajdakowi czemu chcesz się z nim poznać:</p>
+			<input type="text" />
+			<div>
+				<input type="checkbox" name="" id="" />
+				<label for="">Tak, jestem świadomy że to upierdliwa osoba.</label>
+			</div>
+			<div>
+				<input type="radio" name="" id="" />
+				<label for="">Jestem kobietą</label>
+			</div>
+			<div>
+				<input type="radio" name="" id="" />
+				<label for="">Jestem mężczyzną</label>
+			</div>
+			<input type="submit" value="Prześlij zaproszenie do znajomych." />
+		</form>
+		<script>
+			document.querySelector('button').addEventListener('click', () => {
+				document.querySelector('form').classList.add('widoczny');
+			});
+		</script>
+	</body>
+</html>

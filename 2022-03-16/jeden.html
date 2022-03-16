@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<style>
+			.wielkiBackdrop {
+				background-color: crimson;
+				color: white;
+				padding: 2rem;
+				border-radius: 2rem;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>A</p>
+			<p>B</p>
+			<p>C</p>
+			<p>D</p>
+		</div>
+		<button id="btn1">1</button>
+		<button id="btn2">2</button>
+		<button>3</button>
+		<button>4</button>
+		<script>
+			btn1.onclick = function () {
+				document.querySelector('div').children[0].style.color = 'crimson';
+				document.querySelector('div').lastElementChild.style.fontSize = '3em';
+			};
+
+			btn2.addEventListener('click', function () {
+				document.querySelector(
+					'div'
+				).firstElementChild.nextElementSibling.style.fontWeight = 'bold';
+				document.querySelector(
+					'div'
+				).firstElementChild.nextElementSibling.style.paddingTop = '2rem';
+			});
+
+			function guziecNumerTrzy() {
+				document.querySelector('p:nth-of-type(2)').style.paddingLeft = '10rem';
+			}
+			document
+				.querySelector('button:nth-of-type(3)')
+				.addEventListener('click', guziecNumerTrzy);
+
+			document
+				.querySelector('button:last-of-type')
+				.addEventListener('click', () => {
+					document.querySelectorAll('p').forEach((el) => {
+						el.classList.toggle('wielkiBackdrop');
+					});
+				});
+		</script>
+	</body>
+</html>
