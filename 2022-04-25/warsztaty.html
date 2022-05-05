@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<style>
+			body {
+				background-color: #484848;
+				color: white;
+				font-family: 'Arial';
+				margin: 0;
+				padding: 0;
+			}
+			nav {
+				margin: 2rem 0;
+				background-color: #323232;
+			}
+			ol {
+				display: flex;
+				flex-direction: row;
+				list-style: none;
+				padding: 0.5rem;
+			}
+			li > a {
+				background-color: #484848;
+				display: block;
+				padding: 1rem;
+				margin: 0.5rem;
+				padding: 0.8rem 1.3rem;
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+				border-radius: 69rem;
+			}
+			li > a:focus {
+				outline: 2px solid blueviolet;
+				box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+			}
+			li > a:hover {
+				outline: 2px solid blueviolet;
+				box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+			}
+			section {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+				width: 720px;
+			}
+			section > div {
+				margin: 0.5rem;
+			}
+			section > div:not(:last-of-type) {
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+				align-self: flex-end;
+				margin-right: 12rem;
+			}
+			section input {
+				padding: 0.35rem;
+			}
+			section input:focus {
+				outline: 2px solid blueviolet;
+			}
+			section > button {
+				background-color: #242424;
+				padding: 0.8rem 1.3rem;
+				font-size: 1rem;
+				border: none;
+				color: white;
+				align-self: flex-end;
+				border-radius: 69rem;
+			}
+			section > button:hover {
+				outline: 2px solid blueviolet;
+				cursor: pointer;
+				box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+			}
+			section > button:focus {
+				outline: 2px solid blueviolet;
+				box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+			}
+			section > div:last-of-type {
+				width: 100%;
+				text-align: center;
+				height: 12rem;
+				border: 1px solid white;
+				margin: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ol>
+				<li><a href="#">STRONA GŁÓWNA</a></li>
+				<li><a href="#">WARSZTATY</a></li>
+			</ol>
+		</nav>
+		<section>
+			<h1>FORMULARZ REJESTRACJI NA WARSZTATY CZYTELNICZE</h1>
+			<div>
+				<label for="">
+					<span>PODAJ LICZBĘ DOROSŁYCH</span>
+					<input type="text" />
+				</label>
+			</div>
+			<div>
+				<label for="">
+					<span>PODAJ LICZBĘ DZIECI</span>
+					<input type="text" />
+				</label>
+			</div>
+			<div>
+				<label for="">
+					<span>PODAJ DATĘ WARSZTATÓW</span>
+					<input type="text" />
+				</label>
+			</div>
+			<button>REJESTRACJA</button>
+			<div>
+				<p>Dokonałeś następującej rejestracji:</p>
+				<p></p>
+			</div>
+		</section>
+	</body>
+</html>

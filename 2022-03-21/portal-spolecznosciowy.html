@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<link rel="stylesheet" href="portal.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Portal Społecznościowy</h1>
+		</header>
+		<form>
+			<h1>Dodawanie nowego użytkownika.</h1>
+			<div>
+				<!-- <label for="">Imię i Nazwisko</label> -->
+				<p>Imię i Nazwisko</p>
+				<input type="text" />
+			</div>
+			<div>
+				<p>Opis</p>
+				<input type="text" />
+			</div>
+			<button>Dodaj użytkownika</button>
+		</form>
+		<main>
+			<article>
+				<h1>Moje zainteresowania</h1>
+				<ul>
+					<li>kąkuter</li>
+					<li>angliski</li>
+					<li>śmieciowe fun fakty</li>
+				</ul>
+			</article>
+			<article>
+				<h1>Moi znajomi</h1>
+			</article>
+			<section>
+				<img
+					src="https://avatars.githubusercontent.com/u/56172798?v=4"
+					alt=""
+				/>
+				<div class="opis">
+					<h3>Jakub Mańczak</h3>
+					<p>upierdliwy gościu</p>
+				</div>
+			</section>
+			<section>
+				<img
+					src="https://avatars.githubusercontent.com/u/35652893?v=4"
+					alt=""
+				/>
+				<div class="opis">
+					<h3>Artur Dudek</h3>
+					<p>umie w rzeczy czasami</p>
+				</div>
+			</section>
+			<section>
+				<img
+					src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimages%2Funknown-avatar-icon-7.jpg&f=1&nofb=1"
+					alt=""
+				/>
+				<div class="opis">
+					<h3>Franciszek Niemczewski</h3>
+					<p>franek, honor i ojczyzna</p>
+				</div>
+			</section>
+			<script defer>
+				let przycisk = document.createElement('button');
+				przycisk.innerText = 'Dodaj nowego użytkownika.';
+				przycisk.style.margin = '2rem 0';
+				przycisk.style.padding = '1rem';
+				document.querySelector('main').append(przycisk);
+				przycisk.addEventListener('click', () => {
+					console.log('aaa');
+				});
+			</script>
+		</main>
+		<footer>
+			<p>Stronę wykonał Jakub Mańczak.</p>
+			<p>
+				<a href="mailto:jakub@manczak.net">Napisz do mnie.</a>
+			</p>
+		</footer>
+	</body>
+</html>

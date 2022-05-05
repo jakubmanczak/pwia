@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>basic scaffolding</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background-color: #161616;
+				color: white;
+				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			}
+			header {
+				padding: 3rem;
+				text-align: center;
+			}
+			section {
+				background-color: #242424;
+				padding: 1rem 15%;
+				display: flex;
+				justify-content: space-around;
+			}
+			article {
+				border: 1px solid white;
+				padding: 2rem;
+				border-radius: 1rem;
+			}
+			article > img {
+				border-radius: 1rem;
+				margin-bottom: 2rem;
+			}
+			article > button {
+				margin-top: 1rem;
+				width: 100%;
+				padding: 0.5rem;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>STRONA RESPONSYWNA - KARTY</h1>
+		</header>
+		<section>
+			<article>
+				<img src="https://gractwo.pl/assets/img/04.97aec827.png" alt="a" />
+				<p>lorem ipsum</p>
+				<p style="visibility: hidden" class="p1">a to było ukryte!!!</p>
+				<button class="b1">więcej info</button>
+			</article>
+			<article>
+				<img src="https://gractwo.pl/assets/img/01.946fc9ee.png" alt="a" />
+				<p>lorem ipsum</p>
+				<p style="visibility: hidden" class="p2">a to było ukryte!!!</p>
+				<button class="b2">więcej info</button>
+			</article>
+			<article>
+				<img src="https://gractwo.pl/assets/img/02.547afa66.png" alt="a" />
+				<p>lorem ipsum</p>
+				<p style="visibility: hidden" class="p3">a to było ukryte!!!</p>
+				<button class="b3">więcej info</button>
+			</article>
+		</section>
+		<script>
+			document.querySelector('.b1').addEventListener('click', () => {
+				document.querySelector('.p1').style.visibility = 'visible';
+			});
+			document.querySelector('.b2').addEventListener('click', () => {
+				document.querySelector('.p2').style.visibility = 'visible';
+			});
+			document.querySelector('.b3').addEventListener('click', () => {
+				document.querySelector('.p3').style.visibility = 'visible';
+			});
+		</script>
+	</body>
+</html>

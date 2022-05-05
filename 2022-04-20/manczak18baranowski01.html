@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>jakubmanczak18 tomaszbaranowski01</title>
+		<style>
+			button {
+				padding: 4em;
+				margin: 2em;
+			}
+			button.btn4 {
+				padding: 1em;
+				margin: 1em;
+			}
+			input {
+				margin: 2em;
+				width: 22rem;
+			}
+			input.wapiesz {
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Obiekty</h1>
+		<main>
+			<button class="btn1">BTN1</button>
+			<button class="btn2">BTN2</button>
+			<button class="btn3">BTN3</button>
+			<br />
+			<input type="text" placeholder="nazwa dania" />
+			<button class="btn4">dodaj danie wlasne</button>
+			<p></p>
+		</main>
+		<script>
+			function Food(name, price) {
+				this.name = name;
+				this.price = price;
+			}
+
+			const food1 = new Food('kotlet z kurczaka', 35);
+			const food2 = new Food('zupka', 17);
+			const food3 = new Food('naleśniki', 15);
+
+			document.querySelector('.btn1').addEventListener('click', () => {
+				document.querySelector(
+					'p'
+				).innerText = `${food1.name} za ${food1.price} złotych`;
+			});
+			document.querySelector('.btn2').addEventListener('click', () => {
+				document.querySelector(
+					'p'
+				).innerText = `${food2.name} za ${food2.price} złotych`;
+			});
+			document.querySelector('.btn3').addEventListener('click', () => {
+				document.querySelector(
+					'p'
+				).innerText = `${food3.name} za ${food3.price} złotych`;
+			});
+
+			document.querySelector('.btn4').addEventListener('click', () => {
+				const food4 = new Food(
+					document.querySelector('input').value,
+					prompt(`Podaj cenę za ${document.querySelector('input').value}: `)
+				);
+				if (food4.name == 'papaja' && food4.price == 2137) {
+					document.querySelector('input').classList.add('wapiesz');
+				}
+				document.querySelector(
+					'p'
+				).innerText = `${food4.name} za ${food4.price} złotych`;
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+body > header,
+body > footer {
+	position: fixed;
+	background-color: black;
+	color: white;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	left: 0;
+	text-align: center;
+}
+body > header a,
+body > footer a {
+	color: white;
+}
+body > header {
+	top: 0;
+}
+body > footer {
+	bottom: 0;
+	display: flex;
+	justify-content: space-around;
+}
+main {
+	margin-top: 80px;
+	margin-bottom: 80px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+main > article > h1 {
+	background-color: crimson;
+	color: white;
+	width: 56rem;
+	padding: 1rem;
+}
+main > section {
+	width: 56rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 2rem 0;
+	border-bottom: 2px solid black;
+}
+main > section > img {
+	height: 8rem;
+	width: 8rem;
+	border-radius: 50%;
+	margin-right: 5rem;
+}
+main > section > .opis {
+	width: 32rem;
+}
+
+/* 
+		FORM STYLING
+*/
+
+form {
+	/* display: none; */
+	margin: 0;
+	position: absolute;
+	z-index: 10;
+	background-color: #242424;
+	color: white;
+	padding: 2rem;
+	border-radius: 4rem;
+	width: 48rem;
+	height: 32rem;
+	left: calc(50% - 24rem);
+	top: calc(50% - 16rem);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+}
